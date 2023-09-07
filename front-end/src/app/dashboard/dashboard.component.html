@@ -1,0 +1,126 @@
+<main>
+    <div class="head-title">
+        <div class="left">
+            <h1>Dashboard</h1>
+        </div>
+    </div>
+
+    <ul class="box-info">
+        <li>
+            <i class='bx bx-water'></i>
+            <span class="text">
+                <h3>{{ humidityData }} %</h3>
+                <p>Humidity</p>
+            </span>
+        </li>
+        <li>
+            <i class='bx bx-cloud'></i>
+            <span class="text">
+                <h3>{{ temperatureData }} °C</h3>
+                <p>Temperature</p>
+            </span>
+        </li>
+        <li>
+            <i class='bx bx-lock-open-alt'></i>
+            <span class="text">
+                <h3>{{ contactData }}</h3>
+                <p>Door Closed</p>
+                <h5>Apartment</h5>
+            </span>
+        </li> 
+    </ul>
+
+
+    <div class="table-data">
+        <div class="order">
+            <div class="head">
+                <h3>Lights</h3>
+                <i class='bx bx-search'></i>
+                <i class='bx bx-filter'></i>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Device</th>
+                        <th>Switch</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <i class='bx bxs-coffee'></i>
+                            <p>Kitchen Lights</p>
+                        </td>
+                        <td><span class="status on">On</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i class='bx bx-bulb'></i>
+                            <p>Living Room Lights</p>
+                        </td>
+                        <td><span class="status off">Off</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i class='bx bx-bed'></i>
+                            <p>Bedroom Lights</p>
+                        </td>
+                        <td><span class="status on">On</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i class='bx bx-bath'></i>
+                            <p>Bathroom Lights</p>
+                        </td>
+                        <td><span class="status on">On</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="todo">
+            <div class="head">
+                <h3>Motions</h3>
+                <i class='bx bx-plus'></i>
+                <i class='bx bx-filter'></i>
+            </div>
+            <ul class="todo-list">
+                <li class="completed">
+                    <i class='bx bxs-coffee'></i>
+                    <p>Kitchen</p>
+                    <i class='bx bx-run'></i>
+                    <p>Found Motion</p>
+                    <span class="text">
+                        <h3>{{ motionData }}</h3>
+                    </span>
+                </li>   
+                <li class="not-completed">
+                    <i class='bx bx-bulb'></i>
+                    <p>Living Room</p>
+                    <i class='bx bx-run'></i>
+                    <p>Found Motion</p>
+                    <span class="text">
+                        <h3>false</h3>
+                    </span>
+                </li>
+                <li class="not-completed">
+                    <i class='bx bx-bed'></i>
+                    <p>Bedroom</p>
+                    <i class='bx bx-run'></i>
+                    <p>Found Motion</p>
+                    <span class="text">
+                        <h3>false</h3>
+                    </span>
+                </li>
+                <li class="not-completed">
+                    <i class='bx bx-bath'></i>
+                    <p>Bathroom</p>
+                    <i class='bx bx-run'></i>
+                    <p>Found Motion</p>
+                    <span class="text">
+                        <h3>false</h3>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>

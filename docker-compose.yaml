@@ -1,0 +1,28 @@
+version: '3'
+services:
+  mosquitto:
+    image: eclipse-mosquitto
+    container_name: mosquitto
+    volumes:
+      - /opt/mosquitto:/mosquitto
+      - /opt/mosquitto/data:/mosquitto/data
+      - /opt/mosquitto/log:/mosquitto/log
+    ports:
+      - 1883:1883
+      - 9001:9001  # This port is for Webhooks
+    restart: unless-stopped
+  zigbee2mqtt:
+    image: koenkk/zigbee2mqtt
+    container_name: zigbee2mqtt
+    volumes:
+      - /opt/zigbee2mqtt:/app/data
+      - /run/udev:/run/udev:ro
+    depends_on:
+      - mosquitto
+    devices:
+      - /dev/ttyACM0:/dev/ttyACM0
+    ports:
+      - 8082:8080  # This port is for Frontend
+    environment:
+      - TZ=Europe/Sofia
+    restart: unless-stopped

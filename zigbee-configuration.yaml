@@ -1,0 +1,21 @@
+homeassistant: true
+frontend: true
+permit_join: true
+mqtt:
+  base_topic: zigbee2mqtt
+  server: mqtt://<IP-address>
+  user: user
+  password: pass
+  client_id: mqtt-subscriber
+serial:
+  port: /dev/ttyACM0
+device_options:
+  legacy: false
+devices:
+  '0xa4c138a11f3bb89e':
+    friendly_name: Tuya Temperature Sensor
+  '0x00124b002934f4c4':
+    friendly_name: Sonoff Contact Sensor
+  '0x00124b0029323515':
+    friendly_name: Sonoff Motion Sensor
+

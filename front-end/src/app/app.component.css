@@ -1,0 +1,21 @@
+#content {
+  position: relative;
+  width: calc(100% - 280px);
+  left: 280px;
+  transition: 0.3s ease;
+}
+
+app-sidebar.hide ~ #content {
+  width: calc(100% - 60px);
+  left: 60px;
+}
+
+app-sidebar:--webkit-scrollbar {
+  display: none;
+}
+
+app-sidebar.hide {
+  width: 60px;
+}
+
+  
